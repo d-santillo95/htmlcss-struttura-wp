@@ -41,34 +41,89 @@ header h2{
 nav{
     background-color: #504741;
     width: 100%;
-    height: 50px;
-    position: relative;
+}
+
+nav::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav .sinistra{
+    float: left;
+    width: 30%;
+    height: 2px;
 }
 
 nav ul{
+    float: left;
+    width: 50%;
     list-style-type: none;
-    height: 50px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+nav .destra{
+    float: left;
+    width: 20%;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 nav li{
     float: left;
-    padding: 15px;
+    padding: 10px;
     background-color: #504741;
+    border: 1px solid black;
 }
 
-nav li a{
+nav a{
     color: white;
     text-decoration: none;
 }
 
 nav .selezionato{
     background-color: #302b27;
+    position: relative;
+}
+
+nav .selezionato:first-of-type{
+    background-color: #504741;
+}
+
+.selezionato:first-of-type ul{
+    width: 180%;
+}
+
+.selezionato ul{
+    display: none;
+    position: absolute;
+    width: 150%;
+    top: 100%;
+    left: 0;
+    background-color: #504741;
+}
+
+.selezionato li{
+    width: 150%;
+    border: 0.1px solid black;
 }
 
 nav li:hover{
+    background-color: #302b27;
+}
+
+.selezionato:hover ul{
+    display: block;
+}
+
+.selezionato:hover{
+    background-color: #302b27;
+}
+
+.selezionato:first-of-type:hover{
     background-color: #302b27;
 }
 
@@ -113,7 +168,7 @@ main::after{
 
 .pagine a{
     text-decoration: none;
-    color: lightgreen;
+    color: green;
 }
 
 .pagine li:hover{
@@ -128,12 +183,13 @@ main::after{
 section{
     float: left;
     width: 43%;
-    padding: 25px;
     background-color: white;
     border-bottom: 1px solid lightgrey;
 }
 
 section a{
+    display: inline-block;
+    margin: 25px;
     font-size: 2.5em;
     font-weight: 900;
     color: #302b27;
@@ -150,7 +206,11 @@ section img{
 }
 
 section p{
-    margin: 15px 0;
+    margin: 25px;
+}
+
+section hr{
+    margin: 25px;
 }
 
 .menu-destra{
@@ -221,12 +281,17 @@ footer{
     float: right;
     width: 30%;
     font-size: 2em;
-    padding-top: 7%;
-    padding-left: 7%;
+    padding-top: 6%;
+    padding-left: 10%;
 }
 
 #social::after{
     content: "";
     display: table;
     clear: both;
+}
+
+#social .icone a{
+    text-decoration: none;
+    color: lightgrey;
 }
