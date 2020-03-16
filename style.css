@@ -6,6 +6,7 @@
 }
 
 #page-wrapper{
+    background-color: #98876f;
     background-image: url(https://organicthemes.com/demo/natural-lite/wp-content/themes/natural-lite/images/default-pattern.png);
     padding-top: 24px;
 }
@@ -39,15 +40,17 @@ header h2{
 }
 nav{
     background-color: #504741;
-    text-align: center;
     width: 100%;
     height: 50px;
+    position: relative;
 }
 
 nav ul{
     list-style-type: none;
-    width: 50%;
-    margin: auto;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav li{
@@ -159,20 +162,70 @@ section p{
 #ricerca{
     background-color: white;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 25px;
+}
+
+#ricerca input{
+    height: 40px;
+    width: 70%;
+}
+
+#ricerca button{
+    background-color: #504741;
+    height: 40px;
+    width: 25%;
+    color: white;
 }
 
 footer{
     width: 84%;
     margin: 24px auto 0;
+    background-color: white;
 }
 
-footer .pagine{
+#recenti{
+    border-bottom: 1px solid lightgrey;
+}
+
+#recenti .pagine{
     float: left;
     width: 20%;
 }
 
-footer::after{
+#recenti .pagine a{
+    color: #9c9379;
+}
+
+#recenti::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#recenti .pagine:last-child{
+    width: 40%;
+}
+
+#recenti .pagine:last-child p:nth-child(2){
+    color: #9c9379;
+}
+
+#social .pagine{
+    float: left;
+    margin-bottom: 0;
+    width: 70%;
+    display: inline-block;
+}
+
+#social .icone{
+    float: right;
+    width: 30%;
+    font-size: 2em;
+    padding-top: 7%;
+    padding-left: 7%;
+}
+
+#social::after{
     content: "";
     display: table;
     clear: both;
